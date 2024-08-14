@@ -1,0 +1,70 @@
+.container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.tagline {
+    font-style: italic;
+    color: gray;
+    margin-top: 5px;
+}
+
+.releaseDate, .runtime, .rating {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+.genres {
+    margin-bottom: 20px;
+}
+
+.genres h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.genreItem {
+    display: inline-block;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px;
+    font-size: 1rem;
+}
+
+.details {
+    margin-bottom: 20px;
+}
+
+.details h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.overview {
+    margin-bottom: 20px;
+}
+
+.overview h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+

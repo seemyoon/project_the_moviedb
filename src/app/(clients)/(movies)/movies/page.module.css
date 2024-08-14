@@ -1,0 +1,21 @@
+.moviesList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /*todo adaptation/wrap*/
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 50px;
+    gap: 50px;
+}
+
+.moviesPage {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+}
+.noResults {
+    grid-column: 1 / -1;
+    height: 100%
+}
+

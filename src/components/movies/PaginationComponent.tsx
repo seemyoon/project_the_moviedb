@@ -10,7 +10,6 @@ interface IProps {
 const PaginationComponent: FC<IProps> = ({currentPage, endPage}) => {
     const searchParams = useSearchParams();
     const router = useRouter();
-
     const page = Number(searchParams.get('page') || "1");
 
     const handleNext = () => {
@@ -25,7 +24,7 @@ const PaginationComponent: FC<IProps> = ({currentPage, endPage}) => {
     return (
         <div>
             <button onClick={handlePrevious} disabled={currentPage <= 1}>Previous</button>
-            <button onClick={handleNext} disabled={currentPage === endPage}>Next</button>
+            <button onClick={handleNext} disabled={currentPage === endPage}>Next</button>{/*{todo logic with endPage}*/}
         </div>
     );
 };

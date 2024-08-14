@@ -1,0 +1,7 @@
+.userInfo{
+    display: flex;
+    align-items: center;
+}
+.userImg{
+    margin-right: 10px;
+}
