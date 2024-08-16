@@ -1,6 +1,7 @@
 'use client'
 import React, {FC} from 'react';
 import {useRouter, useSearchParams} from "next/navigation";
+import styles from "./paginationStyles.module.css"
 
 interface IProps {
     currentPage: number,
@@ -22,11 +23,21 @@ const PaginationComponent: FC<IProps> = ({currentPage, endPage}) => {
         router.push(`?page=${prevPage}`);
     };
     return (
-        <div>
-            <button onClick={handlePrevious} disabled={currentPage <= 1}>Previous</button>
-            <button onClick={handleNext} disabled={currentPage === endPage}>Next</button>{/*{todo logic with endPage}*/}
+        <div className={styles.btnList}>
+            <button
+                className={styles.customButton}
+                onClick={handlePrevious}
+                disabled={currentPage <= 1}>
+                Previous
+            </button>
+            <button
+                className={styles.customButton}
+                onClick={handleNext}
+                disabled={currentPage === endPage}> {/* todo block btn with styles  */}
+                Next
+            </button>
         </div>
     );
-};
+}
 
 export default PaginationComponent;

@@ -1,0 +1,22 @@
+.customButton {
+    background-color: #000000;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.customButton:hover {
+    background-color: #939393;
+    transform: scale(1.1);
+}
+
+.btnList {
+    margin-bottom: 1.5em;
+    display: flex;
+    gap: 1rem
+}
+

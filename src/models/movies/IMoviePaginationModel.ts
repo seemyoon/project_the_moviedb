@@ -1,7 +1,7 @@
-import {IMovie} from "@/models/movies/movie/IMovie/IMovie";
+import {IMovieList} from "@/models/movies/IMoviesList";
 
 export interface IMoviesPaginationModel {
-    results: IMovie[]
+    results: IMovieList[]
     page: number
     total_pages: number
     total_results: number

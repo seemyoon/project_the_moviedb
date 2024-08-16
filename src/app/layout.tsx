@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     title: "Movie",
     description: "there are list of movie",
     icons: {
-        icon: ['./favicon.ico?v=4'],
+        icon: ['./favicon.ico?v=4'], // todo with favicon (why 2 requests) and then then remove ?. in MoviePage
         apple: ['./apple-touch-icon.png?v=4'],
     }
 };

@@ -1,4 +1,4 @@
-import {ISearchCollectionResult} from "@/models/movies/searchMovies/ISearchCollectionResult";
+import {ISearchCollectionResult} from "@/models/searchMovies/ISearchCollectionResult";
 
 export interface ISearchCollection {
     page: number

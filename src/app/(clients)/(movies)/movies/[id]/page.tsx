@@ -2,6 +2,7 @@ import React from 'react';
 import {movieService} from "@/services/api.service";
 import PosterPreview from "@/components/movies/movieList/PosterPreview";
 import styles from "./page.module.css";
+import Link from "next/link";
 
 const MoviePage = async ({params}: { params: { id: string } }) => {
     const getMovieById = await movieService.movieUrlById(params.id);
@@ -23,9 +24,12 @@ const MoviePage = async ({params}: { params: { id: string } }) => {
             <div className={styles.genres}>
                 <h2>Genres</h2>
                 <ul>
-                    {getMovieById.genres.map(genre => (
-                        <li key={genre.id} className={styles.genreItem}>{genre.name}</li>
-                    ))}
+                    {getMovieById.genres?.map(genre =>
+                        <Link className={styles.genreItem}
+                              href={`/movies/genres/${genre.id}`}
+                              key={genre.id}>
+                            <li>{genre.name}</li>
+                        </Link>)}
                 </ul>
             </div>
 
@@ -34,14 +38,15 @@ const MoviePage = async ({params}: { params: { id: string } }) => {
                 <p><strong>Original Title:</strong> {getMovieById.original_title}</p>
                 <p><strong>Original Language:</strong> {getMovieById.original_language}</p>
                 <p><strong>Status:</strong> {getMovieById.status}</p>
-                <p><strong>Budget:</strong> ${getMovieById.budget.toLocaleString()}</p>
-                <p><strong>Country:</strong> {getMovieById.origin_country.join(', ')}</p>
+                <p><strong>Budget:</strong> ${getMovieById.budget?.toLocaleString()}</p> {/*todo take notes*/}
+                <p><strong>Country:</strong> {getMovieById.origin_country?.join(', ')}</p>
             </div>
 
             <div className={styles.overview}>
                 <h2>Overview</h2>
                 <p>{getMovieById.overview}</p>
             </div>
+            {/*  todo /add btn to back  */}
         </div>
     );
 };

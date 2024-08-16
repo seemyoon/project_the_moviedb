@@ -3,7 +3,7 @@ import React from 'react';
 const MainPage =  () => {
     return (
         <section>
-        </section>
+        </section> // todo every component if have error in url
     );
 };
 

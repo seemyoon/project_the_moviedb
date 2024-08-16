@@ -1,20 +1,18 @@
 import React, {FC} from 'react';
-import {ISearchCollectionResult} from "@/models/movies/searchMovies/ISearchCollectionResult";
-import {movieService} from "@/services/api.service";
-import styles from "@/components/movies/movieList/moviesList.module.css";
-import PosterPreview from "@/components/movies/movieList/PosterPreview";
+import styles from "@/app/(clients)/(movies)/movies/page.module.css";
+import MoviesListCard from "@/components/movies/movieList/MoviesListCard";
 
 type IProps = {
-    item: ISearchCollectionResult
+    itemId: number
 }
-const SearchCollectionMoviesList: FC<IProps> = async ({item}) => {
+const SearchCollectionMoviesList: FC<IProps> = async ({itemId}) => {
     return (
-        <div className={styles.movieList}>
-            <h2>{item.name}</h2>
-            <PosterPreview imagePath={item.poster_path}/>
+        <div className={styles.moviesPage}>
+           <MoviesListCard itemId={itemId} />
         </div>
     );
 };
 
 export default SearchCollectionMoviesList;
+
 

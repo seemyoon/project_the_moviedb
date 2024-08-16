@@ -8,9 +8,10 @@ const urlBuilder = {
             moviesUrlList: (page: number) => baseUrl + "/discover/movie?page=" + page,
             movieUrlById: (id: string | number) => baseUrl + "/movie/" + id,
             genresUrlList: () => baseUrl + "/genre/movie/list",
+            getMovieWithGenres: (genreId: string, page: string) => baseUrl + `/discover/movie?with_genres=${genreId}&page=${page}`
         },
     logoUrl: tmdbConfig.secure_base_url + tmdbConfig.logo_sizes[2] + "/tUkNOAjyTt9D56DUeQfmmAFvwYQ.png",
-    searchFilm: (queryValue: string) => baseUrl + "/search/collection?query=" + queryValue
+    searchFilm: (queryValue: string) => baseUrl + "/search/movie?query=" + queryValue
 }
 
 export {urlBuilder, baseUrl, AccessTokenAuth}

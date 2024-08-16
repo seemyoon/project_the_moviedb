@@ -1,4 +1,4 @@
-import {IGenre} from "@/models/movies/movie/IMovie/IGenre";
+import {IGenre} from "@/models/movie/IGenre";
 
 export interface IMovie {
     adult: boolean
@@ -12,21 +12,11 @@ export interface IMovie {
     popularity: number
     poster_path: string
     release_date: string
+    revenue: number
     runtime: number
     status: string
     tagline: string
     title: string
-    video: boolean
     vote_average: number
     vote_count: number
 }
-
-
-
-
-
-
-
-
-
-
