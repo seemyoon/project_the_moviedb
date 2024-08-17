@@ -18,7 +18,7 @@ const MoviesListCardClientComponent: FC<IProps> = ({releaseDate, movieFromList, 
     return (
         <div className={[styles.movieCard, (isDarkTheme && styles.movieCardDark)].join(" ")}>
             <Link className={styles.navigationPage} href={'/movies/' + itemId}>
-                <PosterPreview imagePath={movieFromList.poster_path} size={2}/>
+                <PosterPreview imagePath={movieFromList.poster_path} size={1}/>
                 <div className={styles.movieList}>
                     <StarsRating voteAverage={movieFromList.vote_average}/>
                     <h1 className={[styles.healingTwo, (isDarkTheme && styles.healingTwoDark)].join(" ")
