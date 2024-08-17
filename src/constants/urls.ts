@@ -10,7 +10,7 @@ const urlBuilder = {
             genresUrlList: () => baseUrl + "/genre/movie/list",
             getMovieWithGenres: (genreId: string, page: string) => baseUrl + `/discover/movie?with_genres=${genreId}&page=${page}`
         },
-    logoUrl: tmdbConfig.secure_base_url + tmdbConfig.logo_sizes[2] + "/tUkNOAjyTt9D56DUeQfmmAFvwYQ.png",
+    logoUrl: tmdbConfig.secure_base_url + tmdbConfig.logo_sizes[5] + "/gAO97wjEtkscZMwbHizELlY2nHf.png",
     searchFilm: (queryValue: string) => baseUrl + "/search/movie?query=" + queryValue
 }
 

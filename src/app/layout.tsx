@@ -2,7 +2,7 @@ import type {Metadata} from "next";
 import "./globals.css";
 import React from "react";
 import HeaderComponent from "@/components/movies/header/HeaderComponent";
-import "@/app/toggleThemeColorStyles/lightThemeColor.css"
+import "@/app/toggleThemeColor.css"
 import Provider from "@/app/GlobalRedux/provider"
 
 export const metadata: Metadata = {
@@ -20,7 +20,7 @@ export default function RootLayout({children}: Readonly<{
     return (
         <html lang="en">
         <Provider>
-            <body className={"light-theme"}>
+            <body>
             <HeaderComponent/>
             {children}
             </body>

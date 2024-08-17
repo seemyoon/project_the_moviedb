@@ -1,21 +1,22 @@
 .moviesList {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /*todo adaptation/wrap*/
-    justify-items: center;
-    align-items: center;
+    grid-template-columns: repeat(4, minmax(100px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: start;
     margin-bottom: 50px;
-    gap: 50px;
 }
 
 .moviesPage {
     display: flex;
     flex-direction: column;
-    justify-items: center;
+    justify-content: center;
     align-items: center;
     text-align: center;
 }
+
 .noResults {
     grid-column: 1 / -1;
-    height: 100%
+    font-size: 1.5rem;
+    color: #555;
 }
-

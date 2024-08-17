@@ -1,12 +1,12 @@
 import React from 'react';
 import Image from "next/image";
-import circleUserRegularFr from "@/img/circle-user-regular.svg"
+import profile from "@/img/profile.png"
 import styles from "./userInfo.module.css"
 
 const UserInfoComponent = () => {
     return (
         <div className={styles.userInfo}>
-        <Image className={styles.userImg} src={circleUserRegularFr} alt={"user photo"} height={35} width={35}></Image>
+        <Image className={styles.userImg} src={profile} alt={"user photo"} height={35} width={35}></Image>
             <h4>User account</h4>
         </div>
     );

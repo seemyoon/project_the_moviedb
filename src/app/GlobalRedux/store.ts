@@ -2,14 +2,16 @@
 import {configureStore, createSlice} from "@reduxjs/toolkit";
 import {useDispatch, useSelector} from "react-redux";
 
-type DarkThemeToggleStateType ={
+type DarkThemeToggleStateType = {
     isDarkTheme: boolean
 }
 
 const initialDarkThemeToggleState: DarkThemeToggleStateType = {
-    isDarkTheme: false,
+    isDarkTheme: JSON.parse(localStorage.getItem("isDarkTheme") || 'false')
 }
-const themeToggleSlice = createSlice({
+
+
+export const themeToggleSlice = createSlice({
     name: "themeToggleSlice",
     initialState: initialDarkThemeToggleState,
     reducers: {

@@ -6,3 +6,30 @@
 li {
     list-style-type: none;
 }
+
+body {
+    background: #f0efed;
+}
+
+body.darkTheme {
+    background: #000000;
+    color: white;
+}
+
+header ul {
+    background: #ffffff;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    border: 0px solid #000;
+}
+
+header ul.headerContainerDark {
+    background: #000000;
+    color: white;
+    border: 0px solid #ffffff;
+    box-shadow: 0 4px 4px 0 rgba(254, 254, 254, 0.24);
+}
+
+header > ul.headerContainerDark > li > a {
+    color: white;
+}
+

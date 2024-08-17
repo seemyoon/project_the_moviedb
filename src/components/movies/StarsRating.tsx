@@ -1,17 +1,19 @@
 'use client';
-import StarRatings from 'react-star-ratings';
 import React, {FC} from 'react';
+import dynamic from 'next/dynamic'
+
+const DynamicStarRatings = dynamic(() => import('react-star-ratings'), {ssr: false}); // todo take a note
 
 type Props = {
     voteAverage: number
 }
 
 const StarsRating: FC<Props> = ({voteAverage}) => {
-    const normalizedRating = voteAverage / 2 // todo /fix stars
+    const resultVoteAverage = voteAverage / 2;
     return (
         <div>
-            <StarRatings
-                rating={normalizedRating}
+            <DynamicStarRatings
+                rating={resultVoteAverage}
                 starRatedColor="gold"
                 numberOfStars={5}
                 name="rating"
@@ -21,5 +23,6 @@ const StarsRating: FC<Props> = ({voteAverage}) => {
         </div>
     );
 };
+
 
 export default StarsRating;
