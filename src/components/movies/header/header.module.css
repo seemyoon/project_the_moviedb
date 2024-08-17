@@ -7,7 +7,7 @@
     height: 15vh;
     border: 0px solid #000;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-    background: #fff;
+    background: #b90000;
     margin-bottom: 50px;
     border-radius: 9px;
     margin-top: 10px;
@@ -23,6 +23,7 @@
 
 .genreContainer {
     position: relative;
+    text-align: center;
 }
 
 .linkContainer{
@@ -43,6 +44,7 @@
     background-color: white;
     border: 1px solid #ddd;
     z-index: 1000;
+    text-align: center;
 }
 
 .genreContainer:hover .dropdown {

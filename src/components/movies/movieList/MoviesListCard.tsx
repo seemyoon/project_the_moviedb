@@ -13,12 +13,13 @@ interface IProps {
 const MoviesListCard: FC<IProps> = async ({itemId}) => {
     const movieFromList = await movieService.movieUrlById(itemId)
     const releaseDate = movieFromList.release_date.substring(0, 4)
+
     return (
         <div>
             <Link className={styles.navigationPage} href={'/movies/' + itemId}>
-                <div className={styles.movieList}>
                     <PosterPreview imagePath={movieFromList.poster_path} size={2}/>
-                    <StarsRating/>
+                <div className={styles.movieList}>
+                    <StarsRating voteAverage={movieFromList.vote_average}/>
                     <h1 className={styles.healingTwo}>{movieFromList.title}</h1>
                     <ul className={styles.description}>
                         {movieFromList.genres.map(genre =>

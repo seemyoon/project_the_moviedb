@@ -9,7 +9,7 @@ const GenreComponent = async () => {
     return (
         <div className={styles.genreContainer}>
             <ul className={styles.dropdown}>
-                {listOfGenres.map(genre => <Link className={styles.genreLinkContainer}
+                {listOfGenres.map(genre => <Link className={styles.linkContainer}
                      href={`/movies/genres/${genre.id}`} key={genre.id}>
                         <li>{genre.name}</li>
                 </Link>)}
