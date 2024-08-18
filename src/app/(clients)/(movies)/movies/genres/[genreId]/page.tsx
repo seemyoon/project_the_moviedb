@@ -20,7 +20,7 @@ const GenrePage = async (
                 <div className={styles.moviesList}>
                     {moviesPage.results.map(value => <MoviesListCard key={value.id} itemId={value.id}/>)}
                 </div>
-                <PaginationComponent currentPage={moviesPage.page} endPage={moviesPage.total_pages}/>
+                <PaginationComponent endPage={500}/>
             </div>
         </div>
     );

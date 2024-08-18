@@ -7,7 +7,7 @@ const UserInfoComponent = () => {
     return (
         <div className={styles.userInfo}>
         <Image className={styles.userImg} src={profile} alt={"user photo"} height={35} width={35}></Image>
-            <h4>Alexandr Semenets</h4>
+            <h4>User profile</h4>
         </div>
     );
 };

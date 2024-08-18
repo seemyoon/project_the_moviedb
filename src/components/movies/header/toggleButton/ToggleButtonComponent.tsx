@@ -31,7 +31,6 @@ const ToggleButtonComponent = () => {
         }
     }, [themeToggleSliceState]);
 
-    // console.log(themeToggleSliceState) //todo why 2 output
     return (
         <div>
             <DarkModeSwitch

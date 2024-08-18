@@ -41,8 +41,8 @@ const movieService = {
     }
 }
 const searchResults = {
-    getSearchResults: async (query: string): Promise<IMoviesPaginationModel> => {
-        return await fetch(urlBuilder.searchFilm(query), options)
+    getSearchResults: async (query: string, page: string): Promise<IMoviesPaginationModel> => {
+        return await fetch(urlBuilder.searchFilm(query,page ), options)
             .then(response => response.json())
             .catch(err => console.error(err));
     }

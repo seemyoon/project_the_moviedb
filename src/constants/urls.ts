@@ -12,7 +12,7 @@ const urlBuilder = {
             getTrailer: (movie_id: number) => baseUrl + `/movie/${movie_id}/videos`
         },
     logoUrl: tmdbConfig.secure_base_url + tmdbConfig.logo_sizes[5] + "/gAO97wjEtkscZMwbHizELlY2nHf.png",
-    searchFilm: (queryValue: string) => baseUrl + "/search/movie?query=" + queryValue,
+    searchFilm: (queryValue: string, page: string) => baseUrl + "/search/movie?query=" + queryValue + "&page=" + page,
     trailerFromYouTube: (getTrailerKey: string) => "https://www.youtube.com/embed/" + getTrailerKey,
 }
 

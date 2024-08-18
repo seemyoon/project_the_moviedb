@@ -21,7 +21,7 @@ const MoviesList = async ({ searchParams }: { searchParams: SearchParamsType }) 
                     <div className={styles.noResults}>No Results Found</div>
                 )}
             </div>
-            <PaginationComponent currentPage={moviesPage.page} endPage={moviesPage.total_pages} />
+            <PaginationComponent endPage={500} />
         </section>
     );
 };

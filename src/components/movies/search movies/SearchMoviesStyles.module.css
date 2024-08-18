@@ -40,7 +40,7 @@
 }
 
 .searchButton:hover {
-    background-color: #005bb5; /* Цвет при наведении */
+    background-color: #005bb5;
 }
 
 .searchButton:focus {
