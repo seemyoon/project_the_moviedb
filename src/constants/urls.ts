@@ -8,10 +8,12 @@ const urlBuilder = {
             moviesUrlList: (page: number) => baseUrl + "/discover/movie?page=" + page,
             movieUrlById: (id: string | number) => baseUrl + "/movie/" + id,
             genresUrlList: () => baseUrl + "/genre/movie/list",
-            getMovieWithGenres: (genreId: string, page: string) => baseUrl + `/discover/movie?with_genres=${genreId}&page=${page}`
+            getMovieWithGenres: (genreId: string, page: string) => baseUrl + `/discover/movie?with_genres=${genreId}&page=${page}`,
+            getTrailer: (movie_id: number) => baseUrl + `/movie/${movie_id}/videos`
         },
     logoUrl: tmdbConfig.secure_base_url + tmdbConfig.logo_sizes[5] + "/gAO97wjEtkscZMwbHizELlY2nHf.png",
-    searchFilm: (queryValue: string) => baseUrl + "/search/movie?query=" + queryValue
+    searchFilm: (queryValue: string) => baseUrl + "/search/movie?query=" + queryValue,
+    trailerFromYouTube: (getTrailerKey: string) => "https://www.youtube.com/embed/" + getTrailerKey,
 }
 
 export {urlBuilder, baseUrl, AccessTokenAuth}

@@ -11,7 +11,7 @@ const MoviesList = async ({ searchParams }: { searchParams: SearchParamsType }) 
     const moviesPage = await movieService.moviesPage(pageParam);
 
     return (
-        <div className={styles.moviesPage}>
+        <section className={styles.moviesPage}>
             <div className={styles.moviesList}>
                 {moviesPage.results.length > 0 ? (
                     moviesPage.results.map(value => (
@@ -22,7 +22,7 @@ const MoviesList = async ({ searchParams }: { searchParams: SearchParamsType }) 
                 )}
             </div>
             <PaginationComponent currentPage={moviesPage.page} endPage={moviesPage.total_pages} />
-        </div>
+        </section>
     );
 };
 

@@ -3,14 +3,21 @@ import "./globals.css";
 import React from "react";
 import HeaderComponent from "@/components/movies/header/HeaderComponent";
 import "@/app/toggleThemeColor.css"
+import { Montserrat } from 'next/font/google'
 import Provider from "@/app/GlobalRedux/provider"
 
+const montserrat = Montserrat({
+    weight: ['400', '700'],
+    style: ['normal', 'italic'],
+    subsets: ['latin'],
+    display: 'swap',
+});
 export const metadata: Metadata = {
     title: "Movie",
     description: "there are list of movie",
     icons: {
-        icon: ['./favicon.ico?v=4'], // todo with favicon (why 2 requests) and then then remove ?. in MoviePage
-        apple: ['./apple-touch-icon.png?v=4'],
+        icon: ['/favicon.ico?v=4'],
+        apple: ['/apple-touch-icon.ico?v=4'],
     }
 };
 
@@ -20,12 +27,11 @@ export default function RootLayout({children}: Readonly<{
     return (
         <html lang="en">
         <Provider>
-            <body>
+            <body className={montserrat.className}>
             <HeaderComponent/>
             {children}
             </body>
         </Provider>
-
         </html>
     );
 }

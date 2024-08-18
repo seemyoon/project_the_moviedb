@@ -1,19 +1,19 @@
-'use client'
-import React, { FC, ReactNode } from 'react';
-import { useRouter } from 'next/router';
+import React from 'react';
+import { useRouter } from 'next/navigation'; // todo take a note
+import Button from '@mui/material/Button';
+import styles from "@/app/(clients)/(movies)/movies/[id]/page.module.css";
 
 const BackButtonComponent = () => {
     const router = useRouter();
 
-    const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-        e.preventDefault();
+    const handleBack = () => {
         router.back();
-    }
+    };
 
     return (
-        <button onClick={handleClick} style={{ marginRight: 10, color: 'black', background: 'none', border: 'none', cursor: 'pointer' }}>
-            Back
-        </button>
+        <Button className={styles.backButton}  variant="contained" color="inherit" onClick={handleBack}>
+            To back
+        </Button>
     );
 };
 

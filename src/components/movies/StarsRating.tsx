@@ -18,7 +18,7 @@ const StarsRating: FC<Props> = ({voteAverage}) => {
                 numberOfStars={5}
                 name="rating"
                 starSpacing="5px"
-                starDimension="20px"
+                starDimension="16px"
             />
         </div>
     );

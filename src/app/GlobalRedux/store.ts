@@ -7,7 +7,8 @@ type DarkThemeToggleStateType = {
 }
 
 const initialDarkThemeToggleState: DarkThemeToggleStateType = {
-    isDarkTheme: JSON.parse(localStorage.getItem("isDarkTheme") || 'false')
+    isDarkTheme: false
+
 }
 
 

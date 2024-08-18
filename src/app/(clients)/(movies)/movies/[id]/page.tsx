@@ -4,9 +4,10 @@ import MoviePageClientComponent from "@/components/clientComponents/MoviePageCli
 
 const MoviePage = async ({params}: { params: { id: string } }) => {
     const getMovieById = await movieService.movieUrlById(params.id);
+    const getTrailer = await movieService.getTrailer(getMovieById.id)
 
     return (
-        <MoviePageClientComponent getMovieById={getMovieById}/>
+        <MoviePageClientComponent getTrailer={getTrailer} getMovieById={getMovieById}/>
 
     );
 };

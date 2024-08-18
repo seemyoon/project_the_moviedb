@@ -2,7 +2,6 @@
     padding: 20px;
     max-width: 800px;
     margin: 0 auto;
-    font-family: Arial, sans-serif;
 }
 
 .header {
@@ -23,7 +22,6 @@
 
 .tagline {
     font-style: italic;
-    /*color: gray;*/
     margin-top: 5px;
 }
 
@@ -70,3 +68,6 @@
     margin-bottom: 10px;
 }
 
+.backButton{
+    margin-bottom: 20px;
+}

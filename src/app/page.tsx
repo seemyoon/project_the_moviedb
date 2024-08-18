@@ -1,10 +1,7 @@
-import React from 'react';
+import {redirect} from 'next/navigation';
 
 const MainPage =  () => {
-    return (
-        <section>
-        </section> // todo every component if have error in url
-    );
+    redirect('/movies');
 };
 
 export default MainPage;

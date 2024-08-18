@@ -2,6 +2,7 @@ import {AccessTokenAuth, urlBuilder} from "@/constants/urls";
 import {IMoviesPaginationModel} from "@/models/movies/IMoviePaginationModel";
 import {IMovie} from "@/models/movie/IMovie";
 import {IGenre} from "@/models/movie/IGenre";
+import {ITrailer} from "@/models/movie/ITrailer/ITrailer";
 
 const options = {
     method: 'GET',
@@ -31,6 +32,11 @@ const movieService = {
         return await fetch(urlBuilder.movieUrl.genresUrlList(), options)
             .then(response => response.json())
             .then(value => value.genres)
+            .catch(err => console.error(err));
+    },
+    getTrailer: async (id: number): Promise<ITrailer> => {
+        return await fetch(urlBuilder.movieUrl.getTrailer(id), options)
+            .then(response => response.json())
             .catch(err => console.error(err));
     }
 }
