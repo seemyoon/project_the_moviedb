@@ -1,5 +1,5 @@
 import React from 'react';
-import {useRouter} from 'next/navigation'; // todo take a note
+import {useRouter} from 'next/navigation';
 import Button from '@mui/material/Button';
 
 const BackButtonComponent = () => {

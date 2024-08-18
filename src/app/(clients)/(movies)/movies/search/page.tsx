@@ -6,9 +6,8 @@ import SearchCollectionMoviesList from "@/components/movies/search movies/Search
 
 type searchParamsType = Record<string, string | undefined>
 const SearchPage = async (
-    {searchParams}: // todo take a note with params and searchParams
-        { searchParams: searchParamsType }) => {
-    const pageParam = ((searchParams["page"]) || "1"); //todo error and logic
+    {searchParams}: { searchParams: searchParamsType }) => {
+    const pageParam = ((searchParams["page"]) || "1");
     const queryParam = searchParams["query"] || "";
     const moviesPage = await searchResults.getSearchResults(queryParam, pageParam)
     return (
@@ -23,7 +22,6 @@ const SearchPage = async (
                             </div>)}
                 </div>
                 <PaginationComponent endPage={moviesPage.total_pages}/>
-                {/* todo pagination with end page , at the same time 2,3 page   */}
             </div>
         </div>
     );

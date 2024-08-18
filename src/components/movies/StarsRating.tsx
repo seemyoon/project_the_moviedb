@@ -2,7 +2,7 @@
 import React, {FC} from 'react';
 import dynamic from 'next/dynamic'
 
-const DynamicStarRatings = dynamic(() => import('react-star-ratings'), {ssr: false}); // todo take a note
+const DynamicStarRatings = dynamic(() => import('react-star-ratings'), {ssr: false});
 
 type Props = {
     voteAverage: number

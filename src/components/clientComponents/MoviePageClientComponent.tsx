@@ -56,9 +56,7 @@ const MoviePageClientComponent: FC<IProps> = ({getMovieById, getTrailer}) => {
                     <p><strong>Original Language:</strong> {getMovieById.original_language}</p>
                     <p><strong>Status:</strong> {getMovieById.status}</p>
                     {getMovieById.budget != 0 &&
-                        <p><strong>Budget:</strong> ${getMovieById.budget?.toLocaleString()}</p>} {/*todo
-                     take
-                     notes*/}
+                        <p><strong>Budget:</strong> ${getMovieById.budget?.toLocaleString()}</p>}
                     <p><strong>Country:</strong> {getMovieById.origin_country?.join(', ')}</p>
                 </div>
 
